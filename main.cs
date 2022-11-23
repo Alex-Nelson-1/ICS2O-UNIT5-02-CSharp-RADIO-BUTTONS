@@ -9,7 +9,7 @@ class Program
     public static void Main(string[] args)
     {
         //Input
-        string posNegValue = "P" ;
+        string posNegValue = "P";
         //Returns an `int` value greater in the range 1 <= value <7
         Random rd = new Random();
         int randomNumber = rd.Next(1, 7);
