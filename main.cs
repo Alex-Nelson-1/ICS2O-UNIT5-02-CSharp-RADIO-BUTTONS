@@ -1,7 +1,7 @@
 // Created by: Alex Nelson
-// Created on: Oct 2022
+// Created on: Nov 2022
 //
-// This program calculates area of a triangle
+// This program will generate a random positive or negative integer for you
 using System;
 
 class Program
@@ -9,19 +9,24 @@ class Program
     public static void Main(string[] args)
     {
         //Input
-        int length;
-        int width;
-        int area;
-        Console.WriteLine("This program calculates the area of a triangle");
+        string posNegValue = "P" ;
+        //Returns an `int` value greater in the range 1 <= value <7
+        Random rd = new Random();
+        int randomNumber = rd.Next(1, 7);
+        Console.WriteLine("This program will generate a positive or negative integer from 1-6");
         Console.WriteLine("");
-        Console.WriteLine("Enter length in cm: ");
-        length = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter width in cm: ");
-        width = Convert.ToInt32(Console.ReadLine());
-        area = length * width / 2;
+        Console.WriteLine("Type P for a postive integer and N for a negative integer");
+        posNegValue = (Console.ReadLine());
         //Output
         Console.WriteLine("");
-        Console.WriteLine("The area is: " + area + " cm²");
+        if (posNegValue == "P")
+        {
+            Console.WriteLine("Here is your positve integer: " + randomNumber);
+        }
+        else
+        {
+            Console.WriteLine("Here is your negative integer: " + randomNumber * -1);
+        }
         Console.WriteLine("\nDone");
     }
 }
